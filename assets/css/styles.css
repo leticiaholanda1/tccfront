@@ -57,11 +57,21 @@ footer {
   color: #D8BFD8;
   font-size: 1.2rem;
   width: 100%;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
+  z-index: 1; /* Garante que fique abaixo de elementos importantes */
+  height: auto; /* Ajusta a altura dinamicamente */
+  padding: 10px; /* Espaçamento interno do rodapé */
 }
-
+/* Para o rodapé precise ficar fixo no fim da página */
+footer.sticky {
+  position: fixed; /* Fixa no final da janela */
+  bottom: 0;
+  width: 100%;
+  background-color: #1a202c; /* Ajuste para cor azul escura */
+  z-index: 1;
+}
 nav ul {
   list-style: none;
   padding: 0;
@@ -145,3 +155,75 @@ nav ul li a:active {
   }
 }
 
+/* Estilo para a lista de produtos */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo */
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1200px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o grid */
+}
+
+
+/* Estilo para cada produto */
+.product {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px; /* Limita a largura dos itens */
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para as imagens */
+.product img {
+  max-width: 100%; /* Mantém a largura da imagem em 100% da div */
+  margin-bottom: 10px; /* Espaçamento entre as imagens */
+  height: auto;
+  display: block; /* Garante alinhamento vertical */
+}
+
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr; /* Exibe uma coluna em telas muito pequenas */
+  }
+}
+
+/*estilo para os textos*/
+.product h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product ul {
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 20px; /* Indentação para listas */
+  list-style-type: disc; /* Estilo de marcador para listas */
+}
+
+.product ul li {
+  margin-bottom: 5px;
+}
