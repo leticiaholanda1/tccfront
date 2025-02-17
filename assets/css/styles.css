@@ -37,7 +37,7 @@ h1 {
   font-family: 'Play', serif;
 }
 
-h2, h3 {
+h2, h3, ul,li,p {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -155,7 +155,7 @@ nav ul li a:active {
   }
 }
 
-/* Estilo para a lista de produtos */
+/* Estilo para a aba de produtos */
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo */
@@ -205,6 +205,8 @@ nav ul li a:active {
   }
 }
 
+
+
 /*estilo para os textos*/
 .product h3 {
   font-size: 18px;
@@ -227,3 +229,68 @@ nav ul li a:active {
 .product ul li {
   margin-bottom: 5px;
 }
+.add-to-cart {
+  background-color: #ff5733; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart:hover {
+  background-color: #e04d2c; /* Cor ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento */
+}
+
+.add-to-cart:active {
+  background-color: #c94426; /* Cor ao clicar */
+  transform: scale(0.95); /* Leve redução */
+}
+ 
+
+
+/* background incial */
+.background {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaço entre as imagens */
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.background img {
+  width: 180px; /* Largura inicial maior */
+  height: auto; /* Mantém a proporção testeste */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.background img:hover {
+  transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Realça a sombra */
+}
+
+@media (max-width: 768px) {
+  .background {
+    flex-wrap: wrap; /* Ajusta para linhas quando necessário */
+  }
+
+  .background img {
+    width: 150px; /* Ajusta a largura para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .background img {
+    width: 130px; /* Ajusta a largura para telas muito pequenas */
+  }
+}
+
+
