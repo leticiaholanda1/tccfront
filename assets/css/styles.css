@@ -250,7 +250,7 @@ nav ul li a:active {
   background-color: #c94426; /* Cor ao clicar */
   transform: scale(0.95); /* Leve redução */
 }
-
+ 
 
 
 /* background incial */
@@ -265,7 +265,7 @@ nav ul li a:active {
 
 .background img {
   width: 180px; /* Largura inicial maior */
-  height: auto; /* Mantém a proporção */
+  height: auto; /* Mantém a proporção testeste */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
   border: 2px solid #fff;
   border-radius: 8px;
